@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+   
+    <title>Document</title>
+</head>
+<body>
+    <!-- <google-pay-button
+    environment="TEST"
+    buttonType="buy"
+    buttonColor="black"
+    [paymentRequest]="{
+      apiVersion: 2,
+      apiVersionMinor: 0,
+      allowedPaymentMethods: [
+        {
+          type: 'CARD',
+          parameters: {
+            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+            allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD']
+          },
+          tokenizationSpecification: {
+            type: 'PAYMENT_GATEWAY',
+            parameters: {
+              gateway: 'example',
+              gatewayMerchantId: 'exampleGatewayMerchantId'
+            }
+          }
+        }
+      ],
+      merchantInfo: {
+        merchantId: '12345678901234567890',
+        merchantName: 'Demo Merchant'
+      },
+      transactionInfo: {
+        totalPriceStatus: 'FINAL',
+        totalPriceLabel: 'Total',
+        totalPrice: '100.00',
+        currencyCode: 'USD',
+        countryCode: 'US'
+      }
+    }"
+    (loadpaymentdata)="onLoadPaymentData($event)"
+  ></google-pay-button> -->
+
+  <div class="container mt-5">
+    <h2>Stripe Checkout</h2>
+    <div class="row mt-5">
+      <div class="col">
+        
+      <button (click)="pay(cart.totalPrice)" class="btn">Pay <i class="fa-solid fa-indian-rupee-sign"></i>{{cart.totalPrice}}</button>
+      </div>
+      <!-- <div class="col-md-4">
+        <button (click)="pay(30)" class="btn btn-success btn-block">Pay $30</button>
+      </div>
+      <div class="col-md-4">
+        <button (click)="pay(50)" class="btn btn-info btn-block">Pay $50</button>
+      </div>     -->
+    </div>
+    <p class="mt-5">
+        <p>Buy your Tasty Snack!!
+    </p>
+  </div>
+</body>
+</html>

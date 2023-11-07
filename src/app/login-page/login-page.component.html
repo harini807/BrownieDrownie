@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body >
+    <div class="wrapper">
+        <form [formGroup]="loginForm" (ngSubmit)="OnSubmit()">
+            <h1>Login</h1>
+            <div class="input-box" [class.error]="loginForm.controls['PhoneNo'].dirty && loginForm.hasError('required','PhoneNo')">
+                <input type="mobile" formControlName="PhoneNo" placeholder="PhoneNo" required >
+            </div>
+            <small  *ngIf="loginForm.controls['PhoneNo'].dirty && loginForm.hasError('required','PhoneNo')" class="text-danger">*PhoneNo is required</small>
+            <div class="input-box" [class.error]="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">
+                <input formControlName="Password" type="password" placeholder="Password" required>
+            </div>
+            <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')"   class="text-danger">*Password is required</small>
+           
+            <br>
+            <br>
+            
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password</a>
+            </div>
+            <button  [disabled]="loginForm.invalid"    type="submit" class="btn">Login</button>
+            <div class="register-link">
+               <p>If you don't have an account ? <a [routerLink]="['../register']">Register</a></p> 
+               <p>If you're an Admin ?<a [routerLink]="['../admin']">Admin Login</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+

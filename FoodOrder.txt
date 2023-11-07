@@ -1,0 +1,21 @@
+Add getAllFoodByTag() method in Food.Service
+Create Tag model for HoldingTags
+Create Tag Components
+	Add Tag Property in Tag Components
+	Template Fils
+	Add Structural Directive in<div> using *ngIf
+	Add <a> tag using *ngFor
+
+
+
+CartModel:
+
+1. Create CartItem Model
+2. Create Cart Model
+3. Create CartService with submember 
+
+	1. Private Cart Field
+	2. Add to cart Food
+	3. Remove from Cart
+	4. GetCart
+4. create Cart-page components

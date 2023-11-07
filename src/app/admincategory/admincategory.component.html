@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div   class="container">
+
+   
+    <ul>
+        <li *ngFor="let food of foods">
+            <div>
+                <a  routerLink="/food/{{food.ID}}"></a>
+                <img src="{{food.Image}}" alt="food images">
+            </div>
+            <div>
+                {{food.ProductName}}
+            </div>
+            <!-- <div>
+                <span *ngFor = "let origins of food.Origin">
+                    {{origins}}
+                </span>
+            </div> -->
+            <div>
+                <span><i class="ri-time-fill"></i></span>
+                {{food.CookTime}}
+            </div>
+            <div>
+                <i class="fa-solid fa-indian-rupee-sign"></i> {{food.Price}}
+                
+            </div>
+            <button class="edit"><i class="fa fa-pencil"></i></button>
+
+           
+            
+        </li>
+    </ul>
+   
+</div>
+   
+
+
+</body>
+</html>

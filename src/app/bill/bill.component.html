@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+</style>
+</head>
+<body>
+<main class="table">
+  <section class="table__header">
+    <h1>Customer's Order</h1>
+  </section>
+  <section class="table__body">
+    <table>
+        <thead>
+          <tr>
+            <th>ProductID</th>
+            <th>ProductName</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cartItem of cart.items">
+            <td>{{cartItem.food.ID}}</td>
+            <td>{{cartItem.food.ProductName}}</td>
+            <td>{{cartItem.quantity}}</td>
+            <td>{{cartItem.price}}</td>
+        
+          </tr>
+        </tbody>
+    </table>
+  </section>
+</main>
+
+
+    <!-- <th>ProductID:</th> -->
+  <!-- <tr *ngFor="let cartItem of cart.items">
+   
+    <th>{{cartItem.food.ID}}</th>
+    <th>{{cartItem.food.ProductName}}</th>
+    <th>{{cartItem.quantity}}</th>
+    <th>{{cartItem.price}} </th>
+   
+  </tr> -->
+
+<!-- <span>{{cart.totalPrice}}</span> -->
+
+</body>
+</html>
+
+
